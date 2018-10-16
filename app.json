@@ -1,0 +1,24 @@
+{
+  "expo": {
+    "sdkVersion": "28.0.0",
+	"entryPoint": "./App.js",
+    "icon": "./assets/nblogo.png",
+    "slug": "nativebasekitchensink",
+    "loading": {
+      "hideExponentText": true,
+      "backgroundImage": "./assets/splashscreen.png"
+    },
+    "orientation": "portrait",
+    "primaryColor": "#cccccc",
+    "packagerOpts": {
+      "assetExts": [
+        "ttf"
+      ]
+    },
+    "androidStatusBarColor": "#334393",
+    "androidStatusBar": {
+      "barStyle": "light-content",
+      "backgroundColor": "#334393"
+    }
+  }
+}
