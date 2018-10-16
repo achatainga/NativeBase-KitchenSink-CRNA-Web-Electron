@@ -1,6 +1,7 @@
-# NativeBase KitchenSink v2.5.0
-An example app with all the UI components of NativeBase
+# NativeBase KitchenSink v2.4.1
+An example app with all the UI components of NativeBase created to be used with expo, web and electron
 
+This repo is a copy of the following repositories but it was modified to be a CrossPlatform app which works as if it was Created with CRNA, Electron and with WebSupport
 > **NativeBase-KitchenSink** comes in four forms of app for you!
 >1. Pure React Native App with `react-navigation` on branch **[master](https://github.com/GeekyAnts/NativeBase-KitchenSink)**
 >2. Pure React Native App with `RNRF` on branch **[RNRF](https://github.com/GeekyAnts/NativeBase-KitchenSink/tree/RNRF)**
@@ -19,80 +20,45 @@ Check [demo](https://nativebase.io/kitchen-sink-web-app/) here
 
 *	**Clone and install packages**
 ```
-git clone git@github.com:GeekyAnts/NativeBase-KitchenSink.git
-cd NativeBase-KitchenSink
-git checkout web-support
+git clone https://github.com/achatainga/NativeBase-KitchenSink-CRNA-Web-Electron.git
+cd NativeBase-KitchenSink-CRNA-Web-Electron
 yarn
 ```
 
-* **Run**
+* **Run Expo**
 
 ```
-npm start
+npm start:native
 ```
 OR
 ```
-yarn start
+yarn start:native
 ```
 
-## To create new react app
+* **Run Web**
 
 ```
-npm install -g create-react-app
-create-react-app nativebase-web-app
-cd nativebase-web-app
-npm eject
-npm install native-base --save
-npm install create-react-app --save
-npm install react-native-web --save
-```
-* **Setup resolve alias in your webpack configuration**
-
-```
-alias: {
-  "react-native/Libraries/Renderer/shims/ReactNativePropRegistry": "react-native-web/dist/modules/ReactNativePropRegistry",
-  "react-native": "react-native-web"
-},
-```
-* **Add Path resolver for NativeBase dependencies in your webpack configuration**
-
-```
-{
-  test: /\.(js|jsx|mjs)$/,
-  include: [
-    paths.appSrc,
-    path.resolve(paths.appNodeModules, "native-base-shoutem-theme"),
-    path.resolve(paths.appNodeModules, "react-navigation"),
-    path.resolve(paths.appNodeModules, "react-native-easy-grid"),
-    path.resolve(paths.appNodeModules, "react-native-drawer"),
-    path.resolve(paths.appNodeModules, "react-native-safe-area-view"),
-    path.resolve(paths.appNodeModules, "react-native-vector-icons"),
-    path.resolve(
-      paths.appNodeModules,
-      "react-native-keyboard-aware-scroll-view"
-    ),
-    path.resolve(paths.appNodeModules, "react-native-web"),
-    path.resolve(paths.appNodeModules, "react-native-tab-view"),
-    path.resolve(paths.appNodeModules, "static-container")
-  ],
-  loader: require.resolve("babel-loader"),
-  options: {
-    cacheDirectory: true
-  }
-},
-```
-
-* **Include Icons**
-
- Copy [font.css](https://github.com/GeekyAnts/NativeBase-KitchenSink/blob/web-support/src/font.css) to App.css
-
-
-* **Run**
-
-```
-npm start
+npm start:web
 ```
 OR
 ```
-yarn start
+yarn start:web
 ```
+
+* **Run Electron**
+
+```
+npm start:web
+```
+Then open a new terminal and:
+```
+npm start:electron
+```
+OR
+```
+yarn start:web
+```
+Then open a new terminal and:
+```
+yarn start:electron
+
